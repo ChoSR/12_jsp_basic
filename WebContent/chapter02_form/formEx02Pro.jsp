@@ -30,13 +30,13 @@
 		<p>4. 셀렉트 : <%=data4 %></p>
 		<p>5. 체크박스 : 
 		<%
-			if(data5 != null){			
+			if(data5 != null){
 				for(int i = 0; i < data5.length; i++){
 					out.println(data5[i]);
 				}
 			} else{
 				out.println("아무것도 선택하지 않음.");	
-			}	
+			}
 		%>
 		</p>
 		<p>6. 텍스트에어리어 : <%=data6 %></p>
@@ -45,6 +45,6 @@
 		<p>9. 날짜 : <%=data9 %></p>
 		<p>10. 숫자 : <%=data10 %></p>
 	</fieldset>
-	
+
 </body>
 </html>
