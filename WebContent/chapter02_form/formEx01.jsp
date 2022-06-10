@@ -4,6 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<script>
+	function sendData(){
+		document.f.submit();
+	}
+	
+</script>
+
 </head>
 <body>
 	
@@ -55,19 +63,7 @@
 		
 	
 	--%>
-
-		<form>
-			<fieldset>
-				<legend>회원정보 입력</legend>
-				<p>이름 : 	<input type="text" name="userName"></p>
-				<p>연락처 : <input type="text" name="userContact"></p>
-				<p>나이 : 	<input type="text" name="userAge"></p>
-				
-				<!-- 방법 1) submit 타입을 사용하여 데이터를 전송한다. (가장 일반적인 방법) -->
-				<p><input type="submit" value="전송1"></p>
-			</fieldset>
-		</form>
-		
+	
 	<%--
 	
 		# 폼 데이터 전송
@@ -83,6 +79,24 @@
 			             HTTP Request 헤더에 포함시켜서 전송하는 방식이다.
 			
 	 --%>
+
+		<form action="formEx01Pro.jsp" method="post" name="f">
+			<fieldset>
+				<legend>회원정보 입력</legend>
+				<!-- form태그 안에 있는 name -->
+				<p>이름 : 	<input type="text" name="userName"></p>
+				<p>연락처 : <input type="text" name="userContact"></p>
+				<p>나이 : 	<input type="text" name="userAge"></p>
+				
+				<!-- 방법 1) submit 타입을 사용하여 데이터를 전송한다. (가장 일반적인 방법) -->
+				<p><input type="submit" value="전송1"></p>
+				
+				<!-- 방법 2) 자바스크립트의 submit() 메서드를 이용하여 전송한다. -->
+				<p><input type="submit" value="전송2" onclick="sendData()"></p>
+			</fieldset>
+		</form>
+		
+		
 	
 </body>
 </html>
