@@ -10,7 +10,10 @@
 
 	 
 	 <!-- html -->
-	 <%-- <jsp:forward page="forwardEx01_target.jsp"></jsp:forward> --%>
+	 <jsp:forward page="forwardEx02_target.jsp">
+	 	<jsp:param value="0x003" name="pdCd"/>
+	 	<jsp:param value="pad" name="pdNm"/>
+	 </jsp:forward>
 	 
 	 <!-- java -->
 	 <%
