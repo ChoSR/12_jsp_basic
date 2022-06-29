@@ -1,5 +1,6 @@
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +31,24 @@
 		parseDate       : 문자열을 날짜 형식으로 변환하여 출력
 
 	--%>
-
 	
+	<h3>날짜 형식</h3>
+	<p>${now }</p>
+	<p><fmt:formatDate value="${now}"/></p>
+	<p><fmt:formatDate value="${now}" pattern="yyyy-MM-dd"/></p>
+	<p><fmt:formatDate value="${now}" pattern="yyyyMMdd"/></p>
+	<p><fmt:formatDate value="${now}" pattern="yyyy년MM월dd일"/></p>
+	<hr>
+
+	<h3>숫자 형식</h3>
+	<p>${nData }</p>
+	<p><fmt:formatNumber value="${nData }" /></p>
+	<p><fmt:formatNumber value="${nData }" pattern=".0"/></p>
+	<p><fmt:formatNumber value="${nData }" pattern=".00"/></p>
+	<p><fmt:formatNumber value="${nData }" pattern=".000"/></p>
+	
+	<p><fmt:formatNumber value="100" pattern="000"/></p>
+	<p><fmt:formatNumber value="10"  pattern="000"/></p>
+	<p><fmt:formatNumber value="1"   pattern="000"/></p>
 </body>
 </html>
