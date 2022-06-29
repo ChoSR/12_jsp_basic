@@ -11,7 +11,7 @@
 	
 	<%-- 
 	
-		# JSTL (JSP Standard Tag Library) 
+		# JSTL (JSP Standard Tag Library)     항상 JSTL.JAR 파일이 있어야한다
 		
 		- JSP 개발을 단순화하기위한 태그 library
 		- 태그라이브러리를 선언해주고 사용해야 한다. 
@@ -51,6 +51,7 @@
 	
 	<hr>
 	<c:remove var="name1"/>
+	
 	<p>${name1 }</p>
 	<p><c:out value="${name2}"/></p>
 	
